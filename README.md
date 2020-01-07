@@ -9,6 +9,6 @@ Currently, my project includes the following:
 You will find that I have included .py files to ease installation of dependecies for a packaged plug and play option.
 This is an ongoing project and will be updated with new files and ease of use.
 
-Currently, most of my projects at the times are experimenting with EDGE AI on SBC (Single Board Computers), TPU Accelerators either by USB or Rpi GPIO. I will begin posting more projects in regards to using Nvidia GPU's and training models for EDGE deployment.
+Most of my projects, at this time, are experimenting with on SBC (Single Board Computers), TPU Accelerators either by USB or Rpi GPIO for EDGE capabilities. I will begin posting more projects in regards to using Nvidia GPU's and training models for EDGE deployment.
 
 Have fun, and enjoy!
