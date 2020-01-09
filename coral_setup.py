@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 # File name   : coral_setup.py
 # Description : Setting Up Coral USB and other tools for Rpi4
 # E-mail      : jamesmx89@gmail.com
@@ -6,17 +5,6 @@
 
 import os
 import time
-
-def replace_num(file,initial,new_num):
-    newline=""
-    str_num=str(new_num)
-    with open(file,"r") as f:
-        for line in f.readlines():
-            if(line.find(initial) == 0):
-                line = (str_num+'\n')
-            newline += line
-    with open(file,"w") as f:
-        f.writelines(newline)
 
 for x in range(1,4):
 	if os.system("sudo apt-get update") == 0:
