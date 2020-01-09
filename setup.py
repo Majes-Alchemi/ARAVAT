@@ -24,6 +24,11 @@ for x in range(1,4):
 	if os.system("sudo apt-get update") == 0:
 		break
 
+os.system("sudo apt-get purge -y wolfram-engine")
+os.system("sudo apt-get purge -y libreoffice*")
+os.system("sudo apt-get -y clean")
+os.system("sudo apt-get -y autoremove")
+
 for x in range(1,4):
 	if os.system("sudo apt-get -y upgrade") == 0:
 		break
@@ -33,18 +38,17 @@ for x in range(1,4):
 		break
 
 for x in range(1,4):
-	if os.system("sudo pip3 install adafruit-pca9685") == 0:
+	if os.system("pip3 install adafruit-pca9685") == 0:
 		break
 
 for x in range(1,4):
-	if os.system("sudo pip3 install rpi_ws281x") == 0:
+	if os.system("pip3 install rpi_ws281x") == 0:
 		break
 
 try:
 	replace_num("/boot/config.txt",'#dtparam=i2c_arm=on','dtparam=i2c_arm=on\nstart_x=1\n')
 except:
 	print('try again')
-
 
 for x in range(1,4):
 	if os.system("sudo apt-get install -y libhdf5-dev") == 0:   ####
@@ -75,7 +79,7 @@ for x in range(1,4):
 		break
 
 for x in range(1,4):
-	if os.system("sudo pip3 install imutils zmq pybase64 psutil") == 0:   ####
+	if os.system("pip3 install imutils zmq pybase64 psutil opencv-contrib-python==4.1.0.25") == 0:   ####
 		break
 
 for x in range(1,4):
@@ -95,7 +99,7 @@ except:
 for x in range(1,4):
 	if os.system("sudo apt-get install -y util-linux procps hostapd iproute2 iw haveged dnsmasq") == 0:
 		break
-'''
+
 try:
 	os.system('sudo mkdir //home/pi/.config/autostart')
 	os.system('sudo touch //home/pi/.config/autostart/car.desktop')
@@ -103,7 +107,7 @@ try:
 		file_to_write.write("[Desktop Entry]\n   Name=Car\n   Comment=Car\n   Exec=sudo python3 //home/pi/adeept_rasptank/server/server.py\n   Icon=false\n   Terminal=false\n   MutipleArgs=false\n   Type=Application\n   Catagories=Application;Development;\n   StartupNotify=true")
 except:
 	pass
-'''
+
 try:
 	os.system('sudo touch //home/pi/startup.sh')
 	with open("//home/pi/startup.sh",'w') as file_to_write:
